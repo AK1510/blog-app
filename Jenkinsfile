@@ -1,11 +1,19 @@
 pipeline {
-   agent any
-
+   agent { label 'linux'}
+tools{
+    maven 'M3'
+  }
    stages {
-      stage('Hello') {
+      stage('Checkout') {
          steps {
-            echo 'Hello World'
+            git 'https://github.com/AK1510/blog-app.git'
          }
       }
+       stage('Build') {
+               steps {
+                 sh 'mvn --version'
+               }
+            }
+
    }
 }
