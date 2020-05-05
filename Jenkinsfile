@@ -4,16 +4,19 @@ tools{
     maven 'M3'
   }
    stages {
+
       stage('Checkout') {
          steps {
             git 'https://github.com/AK1510/blog-app.git'
          }
       }
-       stage('Build') {
+      stage('Build') {
                steps {
-                 sh 'mvn --version'
+                 sh 'mvn clean compile'
                }
-            }
-
+       }
+       stage('Test'){
+          sh 'mvn test'
+       }
    }
 }
