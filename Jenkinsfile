@@ -19,7 +19,7 @@ tools{
          steps{
 
           sh 'mvn test'
-          junit '**/build/test-reports/*.xml'
+         // junit '**/build/test-reports/*.xml'
 
           }
        }
