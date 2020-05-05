@@ -21,5 +21,13 @@ tools{
           junit '**/target/surefire-reports/Test-*.xml'
           }
        }
+
+       stage('Package'){
+
+        steps{
+           sh 'mvn package'
+        }
+
+        }
    }
 }
