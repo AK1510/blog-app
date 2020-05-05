@@ -17,7 +17,8 @@ tools{
        }
        stage('Test'){
          steps{
-          sh 'mvn test'}
+          sh 'mvn test'
+          }
        }
    }
 }
