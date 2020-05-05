@@ -19,7 +19,7 @@ tools{
          steps{
 
           sh 'mvn test'
-          junit 'target/surefire-reports/Test-*.xml'
+          junit '**/build/test-reports/*.xml'
 
           }
        }
